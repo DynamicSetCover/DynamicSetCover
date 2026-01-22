@@ -243,7 +243,7 @@ Following the headers, each line in the output file contains (space-separated):
 1. **Update time**: Time taken for this update in nanoseconds
 2. **Recourse**: Number of sets added/removed in the set cover during this update
 3. **Set cover size**: Current size of the set cover
-4. **(Optional) Set cover elements**: If `dump_freq > 0` and this update is a multiple of `dump_freq`, the sets in the set cover are included (space-separated)
+4. **(Optional) Set cover**: If `dump_freq > 0` and this update is a multiple of `dump_freq`, the sets in the set cover are included (space-separated)
 
 **Note**: The update number is implicit (line number minus header lines). The first data line corresponds to the first update, the second to the second update, and so on.
 
@@ -252,7 +252,7 @@ Following the headers, each line in the output file contains (space-separated):
 # Summary: max_time(ns) avg_time(ns) max_recourse avg_recourse max_set_cover_size avg_set_cover_size
 # 54321 34567 5 2 15 12
 # Update results: time(nanoseconds) recourse set_cover_size set_cover
-# Set cover output frequency: 2 (set cover included every 2 updates)
+# Set cover output frequency: 3 (set cover included every 3 updates)
 12345 2 10
 23456 1 11
 34567 0 11 1 3 5 7 9 11 13 15 17 19 21
@@ -269,5 +269,6 @@ In this example:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 This project is currently under double-blind review. If you publish results using these algorithms, or if you have any other questions, please contact our anonymous email at: dynamicsetcover@gmail.com
